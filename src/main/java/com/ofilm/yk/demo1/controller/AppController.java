@@ -20,6 +20,13 @@ public class AppController {
     @Autowired
     private CommentServiceImpl commentService;
 
+    /**
+     *
+     * @param code
+     * @param appid
+     * @param secret
+     * @return
+     */
     @ResponseBody
     @RequestMapping("/login")
     public AjaxResult getOpenInf(String code,String appid,String secret){
