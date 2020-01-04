@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+		
+		
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="../static/css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+	<!-- //bg effect -->
+	<!-- title -->
+	<h1>Effect Login Form</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form id="login" method="post">
+			<h2>Login Now
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-user"></i>
+					Username
+				</label>
+				<input name="username" type="text" required="required">
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					Password
+				</label>
+				<input name="password" type="password" required="required">
+			</div>
+			<!-- checkbox -->
+			<div class="wthree-text">
+				<ul>
+					<li>
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Stay Signed In</span>
+						</label>
+					</li>
+					<li>
+						<a href="#">Forgot Password?</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //checkbox -->
+			<button id="btnSubmit">login</button>
+			<!-- <input id="btnSubmit" type="submit" value="Log In"> -->
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="button" value="Regist" onclick="javascrtpt:window.location.href='/register'"> 
+			
+		</form>
+	</div>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<p>Copyright &copy; 2019.Company name All rights reserved.<!--<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>--></p>
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	<script src="../static/js/jquery-3.3.1.min.js"></script>
+	<!-- //Jquery -->
+
+	<!-- effect js -->
+	<script src="../static/js/canva_moving_effect.js"></script>
+	<!-- //effect js -->
+	
+	<script src="../static/js/shop.js" ></script> 
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		login();
+		/* $("button").click(function(){
+			var username = $.trim($("input[name='username']").val());
+		    var password = $.trim($("input[name='password']").val());
+		    alert(username);
+		    alert(password);
+		        $.ajax({
+		            type: "post",
+		            url:  "http://localhost:8080/user/login",
+		            data: {
+		                "username": username,
+		                "password": password,
+		            },
+		            success: function(result) {
+		                   window.location.href ="http://localhost:8080/wel";
+		                   alert("gg");
+		                } 
+		        });
+		}); */
+	});		
+	</script>
+	
+</script>
+</body>
+
+</html>

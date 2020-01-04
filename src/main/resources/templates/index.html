@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Student Dormitory</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/index_style.css">
+</head>
+<body>
+    <header>
+        <h4>Welcome To Student Dormitory</h4>
+        <div id="user_name">
+            <tr>
+                <th id="user_name_style">用户名：</th>
+            </tr>
+            <tr>
+             <td th:text="${user.username}"></td>
+            </tr>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/listStudent">List</a></li>
+            <li><a href="/editStudent">Edit</a></li>
+            <li><a href="/deleteStudent">Delete</a></li>
+        </ul>
+
+    </nav>
+
+    <section>
+
+    </section>
+
+    <aside>
+        <p>dsadsadas</p>
+    </aside>
+
+    <footer>
+        <p>CopyRight@</p>
+    </footer>
+</body>
+</html>

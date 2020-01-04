@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content=""
+    />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="../static/css/fontawesome-all.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //css files -->
+    <!-- web-fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //web-fonts -->
+</head>
+
+<body>
+<!-- bg effect -->
+<div id="bg">
+    <canvas></canvas>
+    <canvas></canvas>
+    <canvas></canvas>
+</div>
+<!-- //bg effect -->
+<!-- title -->
+<h1>Welcome To Regist Form</h1>
+<!-- //title -->
+<!-- content -->
+<div class="sub-main-w3">
+    <form action="/user/register" method="post">
+        <h2>Regist Now
+            <i class="fas fa-level-down-alt"></i>
+        </h2>
+        <div class="form-style-agile">
+            <label>
+                <i class="fas fa-user"></i>
+                Username
+            </label>
+            <input name="username" type="text" required="">
+        </div>
+        <div class="form-style-agile">
+            <label>
+                <i class="fas fa-unlock-alt"></i>
+                Password
+            </label>
+            <input name="password" type="password" required="">
+        </div>
+        <div class="form-style-agile">
+            <label>
+                <i class="fas fa-unlock-alt"></i>
+                name
+            </label>
+            <input name="name" type="text" required="">
+        </div>
+        <div class="form-style-agile">
+            <label>
+                <i class="fas fa-unlock-alt"></i>
+                Sex
+            </label>
+            <input name="sex" type="text" required="">
+        </div>
+        <div class="form-style-agile">
+            <label>
+                <i class="fas fa-unlock-alt"></i>
+                Phone
+            </label>
+            <input name="phone" type="text" required="">
+        </div>
+        <div class="form-style-agile">
+            <label>
+                <i class="fas fa-unlock-alt"></i>
+                Email
+            </label>
+            <input name="email" type="text" required="">
+        </div>
+
+		<button id="btnRegist">Regist</button>
+        <!-- <input type="submit" value="Regist"> -->
+
+    </form>
+</div>
+<!-- //content -->
+
+<!-- copyright -->
+<div class="footer">
+    <p>Copyright &copy; 2019.Company name All rights reserved.<!--<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>--></p>
+</div>
+<!-- //copyright -->
+
+<!-- Jquery -->
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<!-- //Jquery -->
+
+<!-- effect js -->
+<script src="../static/js/canva_moving_effect.js"></script>
+<!-- //effect js -->
+
+<script src="../static/js/shop.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		regist();	
+	});		
+	</script>
+
+</body>
+
+</html>

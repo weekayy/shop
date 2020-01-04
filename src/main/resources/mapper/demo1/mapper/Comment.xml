@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ofilm.yk.demo1.mapper.CommentMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseCommentResultMap" type="com.ofilm.yk.demo1.entity.Comment" >
+		<id column="id" property="id" />
+        <result column="commentator" property="commentator" />
+        <result column="attitude" property="attitude" />
+       	<result column="efficiency" property="efficiency" />
+        <result column="environment" property="environment" />
+		<result column="advice" property="advice" />
+		<result column="smtdate" property="smtdate" />
+	</resultMap>
+	<!-- 通用 -->
+	<sql id="Base_Column_List">
+		id, commentator, attitude, efficiency, environment,advice,smtdate,serverid
+	</sql>
+
+	<insert id="addComment" parameterType="com.ofilm.yk.demo1.entity.Comment">
+		insert into sys_comment(commentator,attitude,efficiency,environment,advice,smtdate,serverid)
+		values (#{commentator},#{attitude},#{efficiency},#{environment},#{advice},#{smtdate},#{serverid})
+	</insert>
+
+</mapper>

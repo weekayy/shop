@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Student Dormitory</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/index_style.css">
+</head>
+<body>
+    <header>
+        <h4>Welcome To Student Dormitory</h4>
+        <div id="user_name">
+            <tr>
+                <th style="color: #2196F3">用户名：</th>
+            </tr>
+            <tr>
+                <td th:text="${user.username}"></td>
+            </tr>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/listStudent">List</a></li>
+            <li><a th:href="@{/editStudent(id=${pageList.get(0).id})}">Edit</a></li>
+            <li><a th:href="@{/deleteStudent(id=${pageList.get(0).id})}">Delete</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div style="width:500px;margin:20px auto">
+        <table border="1" cellspacing="0">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>编辑</td>
+                <td>删除</td>
+            </tr>
+            <tr th:each="student : ${pageList}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td><a style="color: blue" th:href="@{/editStudent(id=${student.id})}">编辑</a></td>
+                <td><a style="color: blue" th:href="@{/deleteStudent(id=${student.id})}">删除</a></td>
+            </tr>
+        </table>
+        <br>
+        <div>
+            <a style="color: blue" th:href="@{/listStudent(start=1)}">[首页]</a>
+            <a style="color: blue" th:href="@{/listStudent(start=${pageNum}-1)}">[上一页]</a>
+            <a style="color: blue" th:href="@{/listStudent(start=${pageNum}+1)}">[下一页]</a>
+            <a style="color: blue" th:href="@{/listStudent(start=${pages})}">[末页]</a>
+        </div>
+        </div>
+    </section>
+
+    <aside>
+        <p>dsadsadas</p>
+    </aside>
+
+    <footer>
+        <p>CopyRight@</p>
+    </footer>
+</body>
+
+</html>
